@@ -8,26 +8,31 @@
 
 body {
   min-height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1455651512878-0ddbb4c4d0a5");
+  font-family: "Black Ops One", sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1484589065579-248aad0d8b13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=759&q=100");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: grid;
-  place-content: center;
-  padding-inline: 1.5rem;
+  place-items: center;
+  padding-inline: 1rem;
 }
 
 main {
-  padding: 5rem;
+  width: 100%;
+  max-width: 33.75rem;
+  padding: 1.5rem;
   background: rgba(255, 125, 0, 0.25);
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 125, 0, 0.2);
   border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
 
   .analog-clock {
     position: relative;
-    width: 18.75rem;
+    width: 10rem;
     aspect-ratio: 1/1;
     border: 8px solid #fdf4ea;
     border-radius: 99rem;
@@ -91,6 +96,7 @@ main {
   }
 
   hr {
+    width: 100%;
     margin-block: 2rem;
     border: none;
     border-bottom: 1px solid #fdf4ea;
@@ -100,9 +106,28 @@ main {
     text-align: center;
     color: #fdf4ea;
     font-size: 3rem;
+    font-weight: 400;
   }
 }
 
 .no-transition {
   transition: none !important;
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 4rem;
+
+    .analog-clock {
+      width: 18rem;
+    }
+
+    hr {
+      margin-block: 3rem;
+    }
+
+    .digital-clock {
+      font-size: 4rem;
+    }
+  }
 }
